@@ -9,7 +9,6 @@ import Nav from '../components/Nav';
 import CountdownTimer from '../components/CountdownTimer';
 import About from '../components/About/index';
 import Speaker from '../components/Speaker';
-import Project from '../components/Project';
 import Events from '../components/Events';
 import SponsorSection from '../components/SponsorSection';
 import Footer from '../components/Footer';
@@ -28,7 +27,7 @@ const Index = () => {
   }
 
   const { isLoaded, rpData, nav, gates } = useGetStaticData();
-  const { events, speakerSection, projectSection, sponsors } = rpData;
+  const { events, speakerSection, sponsors } = rpData;
 
   return (
     <>
@@ -101,10 +100,6 @@ const Index = () => {
             </Element> */}
             <Element name="speakers">
               <Speaker speakers={speakerSection.list} />
-            </Element>
-
-            <Element name="projects">
-              <Project projects={projectSection.list} />
             </Element>
 
             <Element name="events">
